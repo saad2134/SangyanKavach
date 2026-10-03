@@ -1,48 +1,63 @@
 import React from 'react';
-import { Shield, Lock, Terminal, Code2, Globe } from 'lucide-react';
+import { Shield, Lock, Terminal, Github, ExternalLink, Code2 } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="mt-20 border-t border-white/[0.08] bg-[#050608]/90 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <footer className="mt-24 border-t border-white/[0.08] bg-[#050608]/90 py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         
-        {/* Core Prototype Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-2xl glass-panel border border-white/[0.06]">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
-              <Code2 className="w-4 h-4" />
+        {/* Developer Attribution Card */}
+        <div className="p-6 rounded-2xl bg-[#0b0d13] border border-white/[0.08] flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xl">
+          
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400">
+                Developer Prototype Release
+              </span>
+              <span className="text-neutral-600">•</span>
+              <span className="text-xs font-mono text-neutral-400">
+                v2.4 Production Candidate
+              </span>
             </div>
-            <div>
-              <div className="text-xs font-mono font-bold text-slate-200 tracking-wider uppercase">
-                Developer Prototype Release // Standalone Build
-              </div>
-              <p className="text-xs text-slate-400 font-sans mt-0.5">
-                Engineered by independent developer for public investor protection, fraud interception, and financial resilience.
-              </p>
+            <div className="text-sm font-semibold text-neutral-200 flex items-center gap-2">
+              <span>Engineered by</span>
+              <a
+                href="https://github.com/saad2134"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-cyan-400 font-bold underline underline-offset-4 decoration-cyan-500/40 hover:decoration-cyan-400 transition"
+              >
+                Saad M. (@saad2134)
+              </a>
             </div>
+            <p className="text-xs text-neutral-400 max-w-xl leading-relaxed">
+              Designed as a sovereign public-good defensive utility to protect retail investors from financial fraud, unregistered finfluencers, and pre-IPO allocation traps.
+            </p>
           </div>
 
-          <div className="flex items-center gap-4 text-xs font-mono text-slate-400">
-            <div className="flex items-center gap-1.5">
-              <Lock className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Zero Data Retention</span>
-            </div>
-            <span className="text-slate-700">•</span>
-            <div className="flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Non-Commercial Public Utility</span>
-            </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              href="https://github.com/saad2134/SangyanKavach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-neutral-200 hover:text-white border border-white/[0.1] hover:border-cyan-500/40 transition text-xs font-mono flex items-center gap-2 group"
+            >
+              <Github className="w-4 h-4 text-neutral-400 group-hover:text-cyan-400 transition" />
+              <span>saad2134/SangyanKavach</span>
+              <ExternalLink className="w-3 h-3 text-neutral-500 group-hover:text-cyan-400 transition" />
+            </a>
           </div>
+
         </div>
 
         {/* Regulatory Disclaimers & IP */}
-        <div className="text-center text-[11px] font-sans text-slate-500 leading-relaxed max-w-4xl mx-auto space-y-1.5 pt-2">
+        <div className="text-center text-[11px] text-neutral-500 max-w-3xl mx-auto space-y-2 leading-relaxed">
           <p>
-            Statutory Notice: SangyanKavach provides zero stock tips, investment advice, or buy/sell recommendations. This developer prototype conducts heuristic discrepancy audits against public regulatory registries solely for public-good awareness.
+            Statutory Notice: SangyanKavach provides zero stock tips, investment advice, or buy/sell recommendations. This developer prototype conducts heuristic discrepancy audits against public regulatory registries solely for public-good awareness and pre-transaction interception.
           </p>
-          <p className="text-slate-600 font-mono text-[10px]">
-            © 2026 SangyanKavach • Built by Independent Developer • Cross-referenced against official SEBI, NSDL, and RBI registries.
-          </p>
+          <div className="text-[10px] font-mono text-neutral-600">
+            © 2026 SangyanKavach • Developed by Saad M. • Source code licensed for public investor protection.
+          </div>
         </div>
 
       </div>
